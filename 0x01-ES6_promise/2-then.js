@@ -10,6 +10,6 @@ export default function handleResponseFromAPI(promise) {
     if (error) {
       return Error();
     }
-    return null;
   }
+  return null;
 }
