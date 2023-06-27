@@ -1,8 +1,8 @@
 export default function createIteratorObject(report) {
-  let newArray = [];
+  let employeesArray = [];
 
   Object.keys(report.allEmployees).forEach((v) => {
-    newArray = [...newArray, ...report.allEmployees[v]];
+    employeesArray = [...employeesArray, ...report.allEmployees[v]];
   });
-  return newArray;
+  return employeesArray;
 }
