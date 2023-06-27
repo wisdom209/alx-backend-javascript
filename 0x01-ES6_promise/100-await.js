@@ -13,5 +13,6 @@ export default async function asyncUploadUser() {
     if (err) {
       return { photo: null, user: null };
     }
+    return null;
   }
 }
