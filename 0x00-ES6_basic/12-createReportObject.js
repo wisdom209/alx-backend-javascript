@@ -3,8 +3,10 @@ export default function createReportObject(employeesList) {
     allEmployees: employeesList,
     getNumberOfDepartments(employeesList) {
       let x = 0;
-      for (let employee in employeesList) {
-        x++;
+      for (const employee in employeesList) {
+        if (employee) {
+          x += 1;
+        }
       }
       return x;
     },
