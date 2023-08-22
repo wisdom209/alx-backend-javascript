@@ -11,7 +11,7 @@ const app = http.createServer((req, res) => {
     countStudents(path).then((resp) => {
       const response = `This is the list of our students\n${resp}`;
       res.end(response);
-    }).catch((e) => {
+    }).catch(() => {
       res.statusCode = 404;
       res.end('Cannot load the database');
     });
