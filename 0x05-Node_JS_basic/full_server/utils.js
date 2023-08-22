@@ -1,5 +1,5 @@
 
-const fs = require('fs');
+import fs from 'fs';
 
 const readDatabase = (path) => {
   const filePromise = new Promise((resolve, reject) => {
