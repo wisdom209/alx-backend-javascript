@@ -12,7 +12,7 @@ const app = http.createServer((req, res) => {
       response = 'This is the list of our students\n' + response;
       res.end(response);
     }).catch(e => {
-      const msg = 'Error: ' + e.message;
+      const msg = e.message;
       res.end(msg);
     });
   }
