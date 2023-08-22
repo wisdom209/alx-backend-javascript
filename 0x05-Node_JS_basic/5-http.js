@@ -8,10 +8,10 @@ const app = http.createServer((req, res) => {
   }
   if (req.url === '/students') {
     const path = process.argv[2] ? process.argv[2] : '';
-    countStudents(path).then(response => {
-      response = 'This is the list of our students\n' + response;
+    countStudents(path).then((resp) => {
+      const response = `This is the list of our students\n${resp}`;
       res.end(response);
-    }).catch(e => {
+    }).catch((e) => {
       const msg = e.message;
       res.end(msg);
     });
