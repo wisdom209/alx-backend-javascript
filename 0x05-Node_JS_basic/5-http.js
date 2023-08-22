@@ -7,14 +7,13 @@ const app = http.createServer((req, res) => {
     res.end('Hello Holberton School!');
   }
   if (req.url === '/students') {
-    const path = process.argv[2] ? process.argv[2] : '';
+    const path = process.argv[2];
     countStudents(path).then((resp) => {
       const response = `This is the list of our students\n${resp}`;
       res.end(response);
     }).catch((e) => {
-      const msg = e.message;
       res.statusCode = 404;
-      res.end(msg);
+      res.end('Cannot load the database');
     });
   }
 });
