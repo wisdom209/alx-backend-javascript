@@ -13,6 +13,7 @@ const app = http.createServer((req, res) => {
       res.end(response);
     }).catch((e) => {
       const msg = e.message;
+      res.statusCode = 404;
       res.end(msg);
     });
   }
