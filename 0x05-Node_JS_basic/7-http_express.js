@@ -9,15 +9,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  let dbName = process.argv[2];
-  dbName ? dbName = process.argv[2] : dbName = '';
-  countStudents(dbName).then(response => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    response = 'This is the list of our students\n' + response;
-    res.end(response);
-  }).catch(e => {
-    const msg = `${e.message}`;
-    res.end(msg);
+  const dbName = process.argv[2];
+  countStudents(dbName).then((response) => {
+    const outputResponse = `This is the list of our students\n${response}`;
+    res.end(outputResponse);
+  }).catch(() => {
+    res.end('This is the list of our students\nCannot load the database');
   });
 });
 app.listen(1245, 'localhost');
