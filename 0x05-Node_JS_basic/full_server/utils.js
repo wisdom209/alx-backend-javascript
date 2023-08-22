@@ -20,4 +20,4 @@ const readDatabase = (path) => {
   return filePromise;
 };
 
-module.exports = readDatabase;
+export default readDatabase;
