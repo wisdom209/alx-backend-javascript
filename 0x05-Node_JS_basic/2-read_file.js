@@ -2,9 +2,9 @@ const fs = require('fs');
 
 const countStudents = (path) => {
   try {
-    const retData = fs.readFileSync(path, 'utf-8');
+    const returnData = fs.readFileSync(path, 'utf-8');
 
-    const data = retData.toString().split('\n');
+    const data = returnData.toString().split('\n');
 
     const allStudents = data.filter((v, i) => i !== 0 && v.length !== 0);
 
