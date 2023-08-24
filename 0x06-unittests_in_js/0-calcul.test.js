@@ -22,6 +22,16 @@ describe('0-calcul.calculateNumber()', () => {
     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
   });
 
+  it('should pass if values are equal', () => {
+    const result = calculateNumber(-1.1, -3.3);
+    assert.strictEqual(result, -4);
+  });
+
+  it('should not pass when a boolean value is given', () => {
+    const result = calculateNumber(false, 3);
+    assert.notStrictEqual(result, NaN);
+  });
+
   it('should return NaN when one argument is a string', () => {
     assert.strictEqual(calculateNumber('a', 3.7), NaN);
   });
@@ -40,9 +50,5 @@ describe('0-calcul.calculateNumber()', () => {
 
   it('should return NaN when one argument is not a number', () => {
     assert.strictEqual(calculateNumber(3, {}), NaN);
-  });
-
-  it('should throw reference error when given an undefined value', () => {
-    assert.throws(() => { calculateNumber(3, b); }, ReferenceError);
   });
 });
