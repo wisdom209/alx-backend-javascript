@@ -10,7 +10,7 @@ const calculateNumber = (type, a, b) => {
       }
       return Math.round(a) / Math.round(b);
     default:
-      return undefined;
+      return null;
   }
 };
 module.exports = calculateNumber;

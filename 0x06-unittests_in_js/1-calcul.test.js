@@ -19,7 +19,7 @@ describe('1-calcul.calculateNumber()', () => {
   });
 
   it('should return undefined when type is not SUM, DIVIDE or Subtract, a is 1.4 and b is 0', () => {
-    assert.strictEqual(calculateNumber({}, 1.4, 0), undefined);
+    assert.strictEqual(calculateNumber({}, 1.4, 0), null);
   });
 
   it('should return NaN when type is SUM, a is {} and b is 0', () => {
