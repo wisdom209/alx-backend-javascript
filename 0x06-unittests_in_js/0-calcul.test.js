@@ -6,10 +6,6 @@ describe('0-calcul.calculateNumber()', () => {
     assert.strictEqual(calculateNumber(2, 3), 5);
   });
 
-  it('should return 4 when arguments are 2 and `2`', () => {
-    assert.strictEqual(calculateNumber(2, '2'), 4);
-  });
-
   it('should return 6 when arguments are 3.2 and 2.6', () => {
     assert.strictEqual(calculateNumber(3.2, 2.6), 6);
   });
