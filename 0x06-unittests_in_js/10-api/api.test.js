@@ -77,6 +77,7 @@ describe('Test suite for /available_payments endpoint', () => {
     });
   });
 });
+
 describe('Test suite for /login endpoint', () => {
   it('should return Welcome :username when accessing it', () => {
     const url = 'http://localhost:7865/login';
