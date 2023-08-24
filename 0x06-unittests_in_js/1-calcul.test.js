@@ -26,6 +26,16 @@ describe('1-calcul.calculateNumber()', () => {
     assert.strictEqual(calculateNumber('SUM', {}, 0), NaN);
   });
 
+  it('should pass if values are equal', () => {
+    const result = calculateNumber('SUM', -1.5, 3.3);
+    assert.strictEqual(result, 2);
+  });
+
+  it('should not pass when a boolean value is given', () => {
+    const result = calculateNumber('SUM', false, 3);
+    assert.notStrictEqual(result, NaN);
+  });
+
   it('should throw reference error when given an undefined value', () => {
     assert.throws(() => { calculateNumber(a, 3, 4); }, ReferenceError);
   });
