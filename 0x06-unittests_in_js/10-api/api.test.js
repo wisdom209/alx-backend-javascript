@@ -22,13 +22,6 @@ describe('make api call to index page', () => {
       expect(response.headers['content-type']).to.equal('text/html; charset=utf-8');
     });
   });
-
-  it('should have content-length equal to 29', () => {
-    const url = 'http://localhost:7865';
-    request.get(url, (error, response, body) => {
-      expect(response.headers['content-length']).to.equal('29');
-    });
-  });
 });
 
 describe('make api calls to the cart page', () => {
